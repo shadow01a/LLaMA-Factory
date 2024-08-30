@@ -22,8 +22,18 @@
     "columns": {
       "messages": "conversations",
       "tools": "tools"
-    }
-  },
+     }
+   },
+  "bad_data.json": {
+  "file_name": "data.json",
+  "columns": {
+    "prompt": "instruction",
+    "query": "input",
+    "response": "output",
+    "system": "system",
+    "history": "history"
+     }
+   },
   "mllm_demo": {
     "file_name": "mllm_demo.json",
     "formatting": "sharegpt",
