@@ -25,7 +25,7 @@
      }
    },
   "bad_data.json": {
-  "file_name": "data.json",
+  "file_name": "bad_data.json",
   "columns": {
     "prompt": "instruction",
     "query": "input",
