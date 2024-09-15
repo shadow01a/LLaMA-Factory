@@ -12,7 +12,14 @@
     "file_name": "bad_data.json"
   },
   "atri-1": {
-    "file_name": "atri-1.json"
+    "file_name": "atri-1.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+    "system": "system",
+      "history": "history"
+  }
   },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
