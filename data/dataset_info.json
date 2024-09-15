@@ -17,9 +17,9 @@
       "prompt": "instruction",
       "query": "input",
       "response": "output",
-    "system": "system",
+      "system": "system",
       "history": "history"
-  }
+    }
   },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
