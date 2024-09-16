@@ -1,7 +1,7 @@
 {
   "stage": "sft",
   "do_train": true,
-  "model_name_or_path": "Qwen/Qwen2-7B-Instruct",
+  "model_name_or_path": "/gemini/pretrain/Qwen2-7B-Instruct",
   "dataset": "bad_data.json",
   "template": "qwen",
   "finetuning_type": "lora",
