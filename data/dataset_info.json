@@ -25,7 +25,7 @@
     "hf_hub_url": "Bronya-Rand/genshin-impact",
     "formatting": "sharegpt",
     "columns": {
-      "massages": "conversations",
+      "messages": "conversations",
       "system": "system"
     }
   },
