@@ -21,6 +21,18 @@
       "history": "history"
     }
   },
+  "genshin full": {
+    "hf_hub_url": "Bronya-Rand/genshin-impact",
+    "formatting": "sharegpt",
+    "columns": {
+      "massages": "conversations",
+      "system": "system"
+    }
+  },
+  "paimon": {
+    "hf_hub_url": "uITimeCia/Genshi_Paimon",
+    "formatting": "alpaca"
+  },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
     "formatting": "sharegpt",
