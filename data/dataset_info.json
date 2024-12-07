@@ -29,6 +29,14 @@
       "system": "system"
     }
   },
+  "star-rail full": {
+    "hf_hub_url": "Bronya-Rand/honkai-star-rail",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  },
   "paimon": {
     "hf_hub_url": "uITimeCia/Genshi_Paimon",
     "formatting": "alpaca"
