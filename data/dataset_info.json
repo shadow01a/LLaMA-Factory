@@ -11,6 +11,16 @@
   "bad_data.json": {
     "file_name": "bad_data.json"
   },
+  "muice-dataset-train-catgirl": {
+    "hf_hub_url": "Moemu/Muice-Dataset",
+    "ms_hub_url": "himzhzx/muice-dataset-train.catgirl"
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+      ｝
+  },
   "atri-1": {
     "file_name": "atri-1.json",
     "columns": {
@@ -39,6 +49,7 @@
     },
   "Chinese-DeepSeek-R1-Distill-data-110k-SFT": {
     "hf_hub_url": "Congliu/Chinese-DeepSeek-R1-Distill-data-110k-SFT",
+    "ms_hub_url": "liucong/Chinese-DeepSeek-R1-Distill-data-110k-SFT"
     "columns": {
       "prompt": "instruction",
       "query": "input",
