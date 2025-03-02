@@ -19,7 +19,7 @@
       "query": "input",
       "response": "output",
       "history": "history"
-    ｝
+    }
   },
   "atri-1": {
     "file_name": "atri-1.json",
