@@ -13,13 +13,13 @@
   },
   "muice-dataset-train-catgirl": {
     "hf_hub_url": "Moemu/Muice-Dataset",
-    "ms_hub_url": "himzhzx/muice-dataset-train.catgirl"
+    "ms_hub_url": "himzhzx/muice-dataset-train.catgirl",
     "columns": {
       "prompt": "instruction",
       "query": "input",
       "response": "output",
       "history": "history"
-      ｝
+    ｝
   },
   "atri-1": {
     "file_name": "atri-1.json",
