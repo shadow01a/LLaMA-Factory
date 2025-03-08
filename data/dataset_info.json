@@ -15,7 +15,7 @@
     "file_name": "Muice.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "conversations",
+      "messages": "conversation",
       "system": "system"
     }
   },
