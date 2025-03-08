@@ -17,8 +17,7 @@
     "columns": {
       "prompt": "instruction",
       "query": "input",
-      "response": "output",
-      "history": "history"
+      "response": "output"
     }
   },
   "atri-1": {
@@ -27,8 +26,7 @@
       "prompt": "instruction",
       "query": "input",
       "response": "output",
-      "system": "system",
-      "history": "history"
+      "system": "system"
     }
   },
   "genshin full": {
