@@ -14,6 +14,7 @@
   "muice-dataset-train-catgirl": {
     "hf_hub_url": "Moemu/Muice-Dataset",
     "ms_hub_url": "himzhzx/muice-dataset-train.catgirl",
+    "formatting": "sharegpt",
     "columns": {
       "prompt": "instruction",
       "query": "input",
