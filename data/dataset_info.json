@@ -13,15 +13,7 @@
   },
   "muice-dataset-train-catgirl": {
     "file_name": "Muice.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversation",
-      "system": "system"
-               },
-    "tags": {
-      "role_tag": "human",
-      "content_tag": "assistant"
-            }
+    "formatting": "sharegpt"
   },
   "atri-1": {
     "file_name": "atri-1.json",
