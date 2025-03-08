@@ -16,9 +16,12 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversation",
-      "system": "system",
+      "system": "system"
+               },
+    "tags": {
       "role_tag": "human",
       "content_tag": "assistant"
+            }
     }
   },
   "atri-1": {
