@@ -12,8 +12,7 @@
     "file_name": "bad_data.json"
   },
   "muice-dataset-train-catgirl": {
-    "hf_hub_url": "Moemu/Muice-Dataset",
-    "ms_hub_url": "himzhzx/muice-dataset-train.catgirl",
+    "file_name": "Muice.json",
     "formatting": "sharegpt",
     "columns": {
       "prompt": "instruction",
