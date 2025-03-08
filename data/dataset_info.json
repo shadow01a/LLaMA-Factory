@@ -49,7 +49,7 @@
     },
   "Chinese-DeepSeek-R1-Distill-data-110k-SFT": {
     "hf_hub_url": "Congliu/Chinese-DeepSeek-R1-Distill-data-110k-SFT",
-    "ms_hub_url": "liucong/Chinese-DeepSeek-R1-Distill-data-110k-SFT"
+    "ms_hub_url": "liucong/Chinese-DeepSeek-R1-Distill-data-110k-SFT",
     "columns": {
       "prompt": "instruction",
       "query": "input",
