@@ -13,7 +13,15 @@
   },
   "muice-dataset-train-catgirl": {
     "file_name": "Muice.json",
-    "formatting": "sharegpt"
+    "formatting": "sharegpt",
+    "tags（可选，用于 sharegpt 格式）": {
+    "role_tag": "from",
+    "content_tag": "value",
+    "user_tag": "human",
+    "assistant_tag": "assistant",
+    "system_tag": "system"
+  }
+
   },
   "atri-1": {
     "file_name": "atri-1.json",
