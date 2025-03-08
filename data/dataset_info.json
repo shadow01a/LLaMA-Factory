@@ -15,9 +15,8 @@
     "file_name": "Muice.json",
     "formatting": "sharegpt",
     "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output"
+      "messages": "conversations",
+      "system": "system"
     }
   },
   "atri-1": {
