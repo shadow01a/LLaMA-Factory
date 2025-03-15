@@ -8,6 +8,47 @@
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
   },
+  "bad_data.json": {
+    "file_name": "bad_data.json"
+  },
+  "atri-1": {
+    "file_name": "atri-1.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  },
+  "genshin full": {
+    "hf_hub_url": "Bronya-Rand/genshin-impact",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  },
+  "star-rail full": {
+    "hf_hub_url": "Bronya-Rand/honkai-star-rail",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+    },
+  "Chinese-DeepSeek-R1-Distill-data-110k-SFT": {
+    "hf_hub_url": "Congliu/Chinese-DeepSeek-R1-Distill-data-110k-SFT",
+    "ms_hub_url": "liucong/Chinese-DeepSeek-R1-Distill-data-110k-SFT",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "paimon": {
+    "hf_hub_url": "uITimeCia/Genshi_Paimon",
+    "formatting": "alpaca"
+  },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
     "formatting": "sharegpt",
@@ -22,8 +63,8 @@
     "columns": {
       "messages": "conversations",
       "tools": "tools"
-    }
-  },
+     }
+   },
   "mllm_demo": {
     "file_name": "mllm_demo.json",
     "formatting": "sharegpt",
