@@ -12,10 +12,7 @@
     "file_name": "bad_data.json"
   },
   "catgirl": {
-    "file_name": "catgirl.json",
-    "columns": {
-      "query": "None"
-    }
+    "file_name": "catgirl.json"
   },
   "atri-1": {
     "file_name": "atri-1.json",
