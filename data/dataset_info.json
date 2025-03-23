@@ -17,6 +17,9 @@
   "catgirl-common-v2": {
     "file_name": "catgirl-common-v2.json"
   },
+  "neo-test": {
+    "file_name": "neo-1.json"
+  },
   "atri-1": {
     "file_name": "atri-1.json",
     "columns": {
