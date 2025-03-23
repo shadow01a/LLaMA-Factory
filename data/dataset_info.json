@@ -11,8 +11,11 @@
   "bad_data.json": {
     "file_name": "bad_data.json"
   },
-  "catgirl": {
+  "catgirl-v1": {
     "file_name": "catgirl.json"
+  },
+  "catgirl-common-v2": {
+    "file_name": "catgirl-common-v2.json"
   },
   "atri-1": {
     "file_name": "atri-1.json",
