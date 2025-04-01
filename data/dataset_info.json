@@ -17,8 +17,20 @@
   "catgirl-common-v2": {
     "file_name": "catgirl-common-v2.json"
   },
+  "catgirl-common-v2-extra": {
+    "file_name": "catgirl-common-v2-extra.json"
+  },
   "neo-test": {
     "file_name": "neo-1.json"
+  },
+  "catgirl-vl1": {
+  "file_name": "catgirl-vl1.json",
+  "formatting": "sharegpt",
+  "columns": {
+    "messages": "conversations",
+    "images": "images",
+    "videos": "videos"
+    }
   },
   "atri-1": {
     "file_name": "atri-1.json",
