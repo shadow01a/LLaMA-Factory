@@ -73,6 +73,12 @@ def main():
         "help": partial(print, USAGE),
     }
 
+    import argparse
+
+    parser = argparse.ArgumentParser(description="LLaMA Factory Command Line Interface")
+    parser.add_argument("--system", type=str, default=None, help="Custom system prompt to use")
+    args = parser.parse_args()
+
     command = sys.argv.pop(1) if len(sys.argv) >= 1 else "help"
     if command == "train" and (is_env_enabled("FORCE_TORCHRUN") or (get_device_count() > 1 and not use_ray())):
         # launch distributed training
@@ -112,7 +118,10 @@ def main():
         )
         sys.exit(process.returncode)
     elif command in COMMAND_MAP:
-        COMMAND_MAP[command]()
+        if command == "eval":
+            COMMAND_MAP[command](system=args.system)
+        else:
+            COMMAND_MAP[command]()
     else:
         print(f"Unknown command: {command}.\n{USAGE}")
 

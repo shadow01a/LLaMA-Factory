@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from dataclasses import dataclass
+from typing import Optional
 
 from ..data import Role
 from ..extras.constants import CHOICES
@@ -34,7 +35,11 @@ class EvalTemplate:
         return "".join([example["question"]] + candidates + [self.answer]), example["answer"]
 
     def format_example(
-        self, target_data: dict[str, str], support_set: list[dict[str, str]], subject_name: str
+        self,
+        target_data: dict[str, str],
+        support_set: list[dict[str, str]],
+        subject_name: str,
+        system: Optional[str] = None,
     ) -> list[dict[str, str]]:
         r"""Convert dataset examples to messages."""
         messages = []
@@ -46,7 +51,8 @@ class EvalTemplate:
         prompt, response = self._parse_example(target_data)
         messages.append({"role": Role.USER.value, "content": prompt})
         messages.append({"role": Role.ASSISTANT.value, "content": response})
-        messages[0]["content"] = self.system.format(subject=subject_name) + messages[0]["content"]
+        system_prompt = system or self.system.format(subject=subject_name)
+        messages[0]["content"] = system_prompt + messages[0]["content"]
         return messages
 
 

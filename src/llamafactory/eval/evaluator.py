@@ -59,7 +59,7 @@ if TYPE_CHECKING:
 
 
 class Evaluator:
-    def __init__(self, args: Optional[dict[str, Any]] = None) -> None:
+    def __init__(self, args: Optional[dict[str, Any]] = None, system: Optional[str] = None) -> None:
         self.model_args, self.data_args, self.eval_args, finetuning_args = get_eval_args(args)
         self.tokenizer = load_tokenizer(self.model_args)["tokenizer"]
         self.tokenizer.padding_side = "right"  # avoid overflow issue in batched inference for llama2
@@ -67,6 +67,7 @@ class Evaluator:
         self.model = load_model(self.tokenizer, self.model_args, finetuning_args)
         self.eval_template = get_eval_template(self.eval_args.lang)
         self.choice_inputs = [self.tokenizer.encode(ch, add_special_tokens=False)[-1] for ch in CHOICES]
+        self.custom_system = system
 
     @torch.inference_mode()
     def batch_inference(self, batch_input: dict[str, "torch.Tensor"]) -> list[str]:
@@ -112,6 +113,7 @@ class Evaluator:
                     target_data=dataset[eval_split][i],
                     support_set=support_set,
                     subject_name=categorys[subject]["name"],
+                    system=self.custom_system or categorys[subject].get("system", None),
                 )
 
                 input_ids, _ = self.template.encode_oneturn(tokenizer=self.tokenizer, messages=messages)
