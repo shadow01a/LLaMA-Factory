@@ -576,7 +576,9 @@ def parse_template(tokenizer: "PreTrainedTokenizer") -> "Template":
     )
 
 
-def get_template_and_fix_tokenizer(tokenizer: "PreTrainedTokenizer", data_args: "DataArguments") -> "Template":
+def get_template_and_fix_tokenizer(
+    tokenizer: "PreTrainedTokenizer", data_args: "DataArguments", system_prompt: Optional[str] = None
+) -> "Template":
     r"""Get chat template and fixes the tokenizer."""
     if data_args.template is None:
         if isinstance(tokenizer.chat_template, str):
@@ -599,6 +601,11 @@ def get_template_and_fix_tokenizer(tokenizer: "PreTrainedTokenizer", data_args: 
         default_slots = ["{{content}}"] if template.efficient_eos else ["{{content}}", {"eos_token"}]
         template.format_function = FunctionFormatter(slots=default_slots, tool_format=data_args.tool_format)
         template.format_tools = ToolFormatter(tool_format=data_args.tool_format)
+
+    if system_prompt is not None:
+        template.default_system = system_prompt
+    elif data_args.system_prompt is not None:
+        template.default_system = data_args.system_prompt
 
     template.fix_special_tokens(tokenizer)
     template.fix_jinja_template(tokenizer)

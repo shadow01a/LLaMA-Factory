@@ -43,11 +43,12 @@ def run_sft(
     training_args: "Seq2SeqTrainingArguments",
     finetuning_args: "FinetuningArguments",
     generating_args: "GeneratingArguments",
+    system_prompt: Optional[str] = None,
     callbacks: Optional[list["TrainerCallback"]] = None,
 ):
     tokenizer_module = load_tokenizer(model_args)
     tokenizer = tokenizer_module["tokenizer"]
-    template = get_template_and_fix_tokenizer(tokenizer, data_args)
+    template = get_template_and_fix_tokenizer(tokenizer, data_args, system_prompt=system_prompt)
     dataset_module = get_dataset(template, model_args, data_args, training_args, stage="sft", **tokenizer_module)
     model = load_model(tokenizer, model_args, finetuning_args, training_args.do_train)
 
