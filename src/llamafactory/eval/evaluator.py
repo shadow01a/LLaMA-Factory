@@ -68,6 +68,25 @@ class Evaluator:
         self.eval_template = get_eval_template(self.eval_args.lang)
         self.choice_inputs = [self.tokenizer.encode(ch, add_special_tokens=False)[-1] for ch in CHOICES]
 
+        # Handle system prompt priority
+        if self.eval_args.system_prompt is not None:
+            # Use explicitly provided system prompt
+            self.template.default_system = self.eval_args.system_prompt
+        else:
+            # Try to use system prompt from dataset
+            try:
+                dataset = load_dataset(
+                    path=os.path.join(self.eval_args.task_dir, self.eval_args.task.split("_")[0]),
+                    name=self.eval_args.task.split("_")[1],
+                    split="train",
+                    cache_dir=self.model_args.cache_dir,
+                    token=self.model_args.hf_hub_token,
+                )
+                if hasattr(dataset, "system") and dataset.system:
+                    self.template.default_system = dataset.system
+            except Exception:
+                pass  # No system prompt found in dataset
+
     @torch.inference_mode()
     def batch_inference(self, batch_input: dict[str, "torch.Tensor"]) -> list[str]:
         logits = self.model(**batch_input).logits

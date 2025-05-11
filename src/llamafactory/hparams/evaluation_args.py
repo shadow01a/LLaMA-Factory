@@ -50,6 +50,12 @@ class EvaluationArguments:
         default=None,
         metadata={"help": "Path to save the evaluation results."},
     )
+    system_prompt: Optional[str] = field(
+        default=None,
+        metadata={
+            "help": "System prompt to use for evaluation. If not provided, will use dataset's system prompt or template's default."
+        },
+    )
     download_mode: DownloadMode = field(
         default=DownloadMode.REUSE_DATASET_IF_EXISTS,
         metadata={"help": "Download mode used for the evaluation datasets."},
